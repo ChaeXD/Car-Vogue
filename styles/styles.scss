@@ -1,0 +1,103 @@
+/* ============= Universal ============== */
+@font-face {
+    font-family: "NY";
+    src: url(../assets/fonts/NewYork.otf);
+}
+@font-face {
+    font-family: "SV";
+    src: url(../assets/fonts/SvargaTypeface-Regular.otf);
+}
+@font-face {
+    font-family: "Etho";
+    src: url(../assets/fonts/ethnocentric-rg.otf);
+}
+
+$primary-color: black;
+$font-headers: Etho, Arial, Helvetica, sans-serif;
+$font-body: SV, Arial, Helvetica, sans-serif;
+$height-full: 100vh;
+$full: 100%;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    background-color: $primary-color;
+    color:rgb(243, 244, 245); 
+    font-family: $font-body;
+}
+h1, h2, h3 {
+    font-family: $font-headers;
+}
+.my-container {
+    min-width: 375px;
+}
+.logo {
+    width: 70px;
+}
+
+
+/* ================== header ================= */
+header {
+    height: $height-full;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: $primary-color url("../assets/images/e-vogue-1.jpg") no-repeat center top;
+    background-size: cover;
+
+    .title, .logo {
+        align-self: flex-end;
+        line-height: 70px;
+    }
+    .title-description {
+        width: $full;
+        align-self: flex-start;
+        text-align: center;
+        padding-bottom: 150px;
+    }
+    .my-nav {
+        background-color: white;
+        width: $full;
+        height: 50px;
+        align-self: flex-end;
+    }
+    .my-nav ul {
+        list-style-type: none;
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .my-nav a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    .my-nav a:hover {
+        color: rgba(0, 0, 0, 0.5);
+    }    
+}
+
+
+/* =============== MEDIA QUERIES ================ */  
+@media only screen and (min-width: 1020px) {
+    /* universal */
+    .my-container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    /* header */
+    header {
+        background-position: center 40%;
+        font-size: 1.4rem;
+    }
+    .title-description {
+        padding-bottom: 250px;
+    }
+
+}
